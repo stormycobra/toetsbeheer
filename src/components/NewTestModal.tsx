@@ -158,7 +158,7 @@ export function NewTestModal({ isOpen, onClose, onSuccess }: NewTestModalProps) 
             onChange={(e) => setTitle(e.target.value)}
             required
             placeholder="bijv. Proefwerk Hoofdstuk 5"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-hidden"
           />
         </div>
 
@@ -170,7 +170,7 @@ export function NewTestModal({ isOpen, onClose, onSuccess }: NewTestModalProps) 
             id="class"
             value={classId}
             onChange={(e) => handleClassChange(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-hidden"
           >
             <option value="">Automatisch aanmaken op basis van toetsnaam</option>
             {classes.map((cls) => (
@@ -197,7 +197,7 @@ export function NewTestModal({ isOpen, onClose, onSuccess }: NewTestModalProps) 
             onChange={(e) => setSubject(e.target.value)}
             required
             placeholder="bijv. Biologie, Frans"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-hidden"
           />
         </div>
 
@@ -212,7 +212,7 @@ export function NewTestModal({ isOpen, onClose, onSuccess }: NewTestModalProps) 
               value={scheduledDate}
               onChange={(e) => setScheduledDate(e.target.value)}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-hidden"
             />
           </div>
           <div>
@@ -225,7 +225,7 @@ export function NewTestModal({ isOpen, onClose, onSuccess }: NewTestModalProps) 
               value={scheduledTime}
               onChange={(e) => setScheduledTime(e.target.value)}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-hidden"
             />
           </div>
         </div>
@@ -241,7 +241,7 @@ export function NewTestModal({ isOpen, onClose, onSuccess }: NewTestModalProps) 
               value={supervisor}
               onChange={(e) => setSupervisor(e.target.value)}
               placeholder="bijv. tvd1"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-hidden"
             />
           </div>
           <div>
@@ -254,7 +254,7 @@ export function NewTestModal({ isOpen, onClose, onSuccess }: NewTestModalProps) 
               value={location}
               onChange={(e) => setLocation(e.target.value)}
               placeholder="bijv. e307"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-hidden"
             />
           </div>
         </div>
@@ -269,7 +269,7 @@ export function NewTestModal({ isOpen, onClose, onSuccess }: NewTestModalProps) 
             onChange={(e) => setDescription(e.target.value)}
             rows={3}
             placeholder="Optionele notities over deze toets"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none resize-none"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-hidden resize-none"
           />
         </div>
 

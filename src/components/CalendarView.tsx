@@ -120,8 +120,8 @@ export function CalendarView({ onTestClick }: CalendarViewProps) {
     return (
       <div className="p-6">
         <div className="animate-pulse">
-          <div className="h-10 bg-gray-200 rounded w-48 mb-6"></div>
-          <div className="h-96 bg-gray-200 rounded"></div>
+          <div className="h-10 bg-gray-200 rounded-sm w-48 mb-6"></div>
+          <div className="h-96 bg-gray-200 rounded-sm"></div>
         </div>
       </div>
     );
@@ -184,7 +184,7 @@ export function CalendarView({ onTestClick }: CalendarViewProps) {
                         <div
                           key={test.id}
                           onClick={() => onTestClick(test.id)}
-                          className="bg-sky-100 text-sky-900 text-xs px-2 py-1 rounded cursor-pointer hover:bg-sky-200 transition"
+                          className="bg-sky-100 text-sky-900 text-xs px-2 py-1 rounded-sm cursor-pointer hover:bg-sky-200 transition"
                         >
                           <div className="font-medium truncate">{test.title}</div>
                           <div className="text-sky-700 truncate">{test.class_name}</div>

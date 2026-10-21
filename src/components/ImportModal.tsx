@@ -399,7 +399,7 @@ export function ImportModal({ isOpen, onClose, onSuccess }: ImportModalProps) {
                   <select
                     value={selectedSheet}
                     onChange={(e) => handleSheetChange(e.target.value)}
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition bg-white"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-hidden transition bg-white"
                   >
                     {availableSheets.map((sheetName) => (
                       <option key={sheetName} value={sheetName}>{sheetName}</option>
@@ -458,7 +458,7 @@ export function ImportModal({ isOpen, onClose, onSuccess }: ImportModalProps) {
                       value={newClassSubject}
                       onChange={(e) => setNewClassSubject(e.target.value)}
                       placeholder="Vak (optioneel)"
-                      className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none text-sm"
+                      className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-hidden text-sm"
                     />
                   </div>
                 )}
@@ -468,7 +468,7 @@ export function ImportModal({ isOpen, onClose, onSuccess }: ImportModalProps) {
                     <select
                       value={selectedClassId}
                       onChange={(e) => setSelectedClassId(e.target.value)}
-                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none bg-white appearance-none pr-10"
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-hidden bg-white appearance-none pr-10"
                     >
                       <option value="">Kies een klas...</option>
                       {classes.map((cls) => (
@@ -487,7 +487,7 @@ export function ImportModal({ isOpen, onClose, onSuccess }: ImportModalProps) {
                         value={newClassName}
                         onChange={(e) => setNewClassName(e.target.value)}
                         placeholder="Klasnaam (verplicht)"
-                        className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none text-sm"
+                        className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-hidden text-sm"
                       />
                     </div>
                     <div>
@@ -496,7 +496,7 @@ export function ImportModal({ isOpen, onClose, onSuccess }: ImportModalProps) {
                         value={newClassSubject}
                         onChange={(e) => setNewClassSubject(e.target.value)}
                         placeholder="Vak (optioneel)"
-                        className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none text-sm"
+                        className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-hidden text-sm"
                       />
                     </div>
                   </div>
@@ -511,7 +511,7 @@ export function ImportModal({ isOpen, onClose, onSuccess }: ImportModalProps) {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Zoek toetsen..."
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-hidden"
                   />
                 </div>
                 <div className="text-sm text-gray-600 whitespace-nowrap">
@@ -528,7 +528,7 @@ export function ImportModal({ isOpen, onClose, onSuccess }: ImportModalProps) {
                           type="checkbox"
                           checked={allFilteredSelected}
                           onChange={toggleAllFiltered}
-                          className="rounded"
+                          className="rounded-sm"
                         />
                       </th>
                       <th className="px-4 py-3 text-left font-medium text-gray-700">TOETSNAAM</th>
@@ -557,7 +557,7 @@ export function ImportModal({ isOpen, onClose, onSuccess }: ImportModalProps) {
                                 type="checkbox"
                                 checked={test.selected}
                                 onChange={() => toggleTestSelection(originalIndex)}
-                                className="rounded"
+                                className="rounded-sm"
                               />
                             </td>
                             <td className="px-4 py-3 font-medium text-gray-900">{test.toetsnaam}</td>

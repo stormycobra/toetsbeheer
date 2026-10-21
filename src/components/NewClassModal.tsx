@@ -67,7 +67,7 @@ export function NewClassModal({ isOpen, onClose, onSuccess }: NewClassModalProps
             onChange={(e) => setName(e.target.value)}
             required
             placeholder="bijv. 4 VWO A"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-hidden"
           />
         </div>
 
@@ -82,7 +82,7 @@ export function NewClassModal({ isOpen, onClose, onSuccess }: NewClassModalProps
             onChange={(e) => setSubject(e.target.value)}
             required
             placeholder="bijv. Biologie, Frans, Scheikunde"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-hidden"
           />
         </div>
 
@@ -95,7 +95,7 @@ export function NewClassModal({ isOpen, onClose, onSuccess }: NewClassModalProps
             value={schoolYear}
             onChange={(e) => setSchoolYear(e.target.value)}
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-hidden"
           >
             <option value="">Selecteer schooljaar</option>
             {schoolYears.map((year) => (

@@ -123,8 +123,8 @@ export function ArchiveView() {
     return (
       <div className="p-6">
         <div className="animate-pulse space-y-6">
-          <div className="h-8 bg-gray-200 rounded w-64"></div>
-          <div className="h-48 bg-gray-200 rounded"></div>
+          <div className="h-8 bg-gray-200 rounded-sm w-64"></div>
+          <div className="h-48 bg-gray-200 rounded-sm"></div>
         </div>
       </div>
     );

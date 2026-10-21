@@ -183,7 +183,7 @@ export function KanbanView({ onTestClick }: KanbanViewProps) {
                       draggable
                       onDragStart={() => handleDragStart(test.id)}
                       onClick={() => onTestClick(test.id)}
-                      className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 cursor-move hover:shadow-md transition"
+                      className="bg-white rounded-lg p-4 shadow-xs border border-gray-200 cursor-move hover:shadow-md transition"
                     >
                       <h4 className="font-semibold text-gray-900 mb-1">{test.title}</h4>
                       <p className="text-sm text-gray-600 mb-2">

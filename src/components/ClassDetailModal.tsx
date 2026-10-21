@@ -138,8 +138,8 @@ export function ClassDetailModal({ classId, isOpen, onClose, onRefresh }: ClassD
     <Modal isOpen={isOpen} onClose={onClose} title="Klas Details">
       {loading ? (
         <div className="animate-pulse space-y-4">
-          <div className="h-6 bg-gray-200 rounded w-3/4"></div>
-          <div className="h-32 bg-gray-200 rounded"></div>
+          <div className="h-6 bg-gray-200 rounded-sm w-3/4"></div>
+          <div className="h-32 bg-gray-200 rounded-sm"></div>
         </div>
       ) : classData ? (
         <div className="space-y-6">
@@ -173,14 +173,14 @@ export function ClassDetailModal({ classId, isOpen, onClose, onRefresh }: ClassD
                   value={newStudentName}
                   onChange={(e) => setNewStudentName(e.target.value)}
                   placeholder="Naam leerling"
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-hidden"
                 />
                 <input
                   type="text"
                   value={newStudentNumber}
                   onChange={(e) => setNewStudentNumber(e.target.value)}
                   placeholder="Leerlingnummer (optioneel)"
-                  className="w-40 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
+                  className="w-40 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-hidden"
                 />
                 <button
                   type="submit"
