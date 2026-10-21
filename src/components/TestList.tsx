@@ -238,8 +238,8 @@ export function TestList({ searchQuery, onTestClick }: TestListProps) {
     return (
       <div className="p-6">
         <div className="animate-pulse space-y-4">
-          <div className="h-10 bg-gray-200 rounded w-64"></div>
-          <div className="h-64 bg-gray-200 rounded"></div>
+          <div className="h-10 bg-gray-200 rounded-sm w-64"></div>
+          <div className="h-64 bg-gray-200 rounded-sm"></div>
         </div>
       </div>
     );
@@ -255,7 +255,7 @@ export function TestList({ searchQuery, onTestClick }: TestListProps) {
           <select
             value={classFilter}
             onChange={(e) => setClassFilter(e.target.value)}
-            className="text-sm outline-none bg-white border border-gray-300 rounded-lg px-3 py-2 font-medium text-gray-700 cursor-pointer focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
+            className="text-sm outline-hidden bg-white border border-gray-300 rounded-lg px-3 py-2 font-medium text-gray-700 cursor-pointer focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
           >
             <option value="">Alle Klassen</option>
             {uniqueClasses.map((className) => (
@@ -269,7 +269,7 @@ export function TestList({ searchQuery, onTestClick }: TestListProps) {
           value={subjectFilter}
           onChange={(e) => setSubjectFilter(e.target.value)}
           placeholder="Filter op vak..."
-          className="text-sm border border-gray-300 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 w-44"
+          className="text-sm border border-gray-300 rounded-lg px-3 py-2 outline-hidden focus:ring-2 focus:ring-sky-500 focus:border-sky-500 w-44"
         />
 
         <button
@@ -285,12 +285,12 @@ export function TestList({ searchQuery, onTestClick }: TestListProps) {
         </button>
       </div>
 
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-xl shadow-xs border border-gray-200 overflow-hidden">
         <table className="w-full">
           <thead className="bg-gray-50 border-b border-gray-200">
             <tr>
               <th className="text-left px-6 py-4 w-12">
-                <input type="checkbox" className="rounded border-gray-300" />
+                <input type="checkbox" className="rounded-sm border-gray-300" />
               </th>
               <th
                 onClick={() => handleSort('title')}
@@ -343,7 +343,7 @@ export function TestList({ searchQuery, onTestClick }: TestListProps) {
                   <td className="px-6 py-5">
                     <input
                       type="checkbox"
-                      className="rounded border-gray-300 text-sky-600 focus:ring-sky-500"
+                      className="rounded-sm border-gray-300 text-sky-600 focus:ring-sky-500"
                       onClick={(e) => e.stopPropagation()}
                     />
                   </td>
@@ -367,7 +367,7 @@ export function TestList({ searchQuery, onTestClick }: TestListProps) {
                     <div className="flex items-center gap-3">
                       <div className="flex-1 bg-gray-200 rounded-full h-2.5 w-32 overflow-hidden">
                         <div
-                          className="bg-gradient-to-r from-sky-500 to-sky-600 h-full transition-all duration-300"
+                          className="bg-linear-to-r from-sky-500 to-sky-600 h-full transition-all duration-300"
                           style={{
                             width: `${
                               (() => {
@@ -387,7 +387,7 @@ export function TestList({ searchQuery, onTestClick }: TestListProps) {
                           }}
                         ></div>
                       </div>
-                      <span className="text-sm text-gray-700 font-semibold whitespace-nowrap min-w-[2.5rem]">
+                      <span className="text-sm text-gray-700 font-semibold whitespace-nowrap min-w-10">
                         {
                           [
                             test.is_made,

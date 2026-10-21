@@ -223,9 +223,9 @@ export function TestDetailModal({ testId, isOpen, onClose, onRefresh }: TestDeta
     <Modal isOpen={isOpen} onClose={onClose} title="">
       {loading ? (
         <div className="animate-pulse space-y-4">
-          <div className="h-6 bg-gray-200 rounded w-3/4"></div>
-          <div className="h-4 bg-gray-200 rounded w-1/2"></div>
-          <div className="h-32 bg-gray-200 rounded"></div>
+          <div className="h-6 bg-gray-200 rounded-sm w-3/4"></div>
+          <div className="h-4 bg-gray-200 rounded-sm w-1/2"></div>
+          <div className="h-32 bg-gray-200 rounded-sm"></div>
         </div>
       ) : test ? (
         <div className="space-y-5">
@@ -303,7 +303,7 @@ export function TestDetailModal({ testId, isOpen, onClose, onRefresh }: TestDeta
               {!editingCover ? (
                 <button
                   onClick={() => setEditingCover(true)}
-                  className="p-1.5 rounded hover:bg-gray-200 transition text-gray-500 hover:text-gray-700"
+                  className="p-1.5 rounded-sm hover:bg-gray-200 transition text-gray-500 hover:text-gray-700"
                 >
                   <Pencil className="w-3.5 h-3.5" />
                 </button>
@@ -311,7 +311,7 @@ export function TestDetailModal({ testId, isOpen, onClose, onRefresh }: TestDeta
                 <button
                   onClick={handleSaveCover}
                   disabled={savingCover}
-                  className="p-1.5 rounded hover:bg-green-100 transition text-green-600 hover:text-green-700 disabled:opacity-50"
+                  className="p-1.5 rounded-sm hover:bg-green-100 transition text-green-600 hover:text-green-700 disabled:opacity-50"
                 >
                   <Check className="w-3.5 h-3.5" />
                 </button>
@@ -388,7 +388,7 @@ export function TestDetailModal({ testId, isOpen, onClose, onRefresh }: TestDeta
               value={notes}
               onChange={(e) => handleNotesChange(e.target.value)}
               placeholder="Voeg hier uw notities toe..."
-              className="w-full px-3 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none resize-none text-sm text-gray-700"
+              className="w-full px-3 py-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-hidden resize-none text-sm text-gray-700"
               rows={4}
             />
           </div>
@@ -473,7 +473,7 @@ function CoverField({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
-          className="w-full px-3 py-1.5 border border-gray-300 rounded-lg text-sm outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-gray-800"
+          className="w-full px-3 py-1.5 border border-gray-300 rounded-lg text-sm outline-hidden focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-gray-800"
         />
       ) : (
         <p className="text-sm text-gray-500">{value || placeholder}</p>
